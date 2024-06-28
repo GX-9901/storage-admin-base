@@ -271,4 +271,34 @@ export const dynamicRoutes: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    path: '/acl',
+    component: Layout,
+    redirect: '/acl/user/list',
+    name: 'Acl',
+    meta: {
+      title: '权限管理',
+      icon: 'Menu',
+    },
+    children: [
+      {
+        path: '/acl/user/list',
+        name: 'User',
+        component: () => import('@/views/acl/user/index.vue'),
+        meta: { title: '用户管理', icon: 'Menu' },
+      },
+      {
+        path: '/acl/role/list',
+        name: 'Role',
+        component: () => import('@/views/acl/role/index.vue'),
+        meta: { title: '角色管理', icon: 'Menu' },
+      },
+      {
+        path: '/acl/permission/list',
+        name: 'Permission',
+        component: () => import('@/views/acl/permission/index.vue'),
+        meta: { title: '菜单管理', icon: 'Menu' },
+      },
+    ],
+  },
 ]

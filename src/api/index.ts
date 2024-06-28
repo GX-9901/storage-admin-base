@@ -121,3 +121,5 @@ export {
 } from './inventory/invMove'
 
 export { getInvMoveTaskList, showMoveInfoById } from './inventory/invMoveTask'
+
+export { getUsesLists } from './acl/users'

@@ -1,5 +1,30 @@
 import type { ReqPage } from '../types'
 
+export interface UserItem {
+  id: number
+  // "createId": null,
+  // "createName": null,
+  // "updateId": null,
+  // "updateName": null,
+  createTime: string
+  updateTime: string
+  // "param": {},
+  username: string
+  // password: string,
+  name: string
+  // "phone": null,
+  // "warehouseId": null,
+  roleName: string
+  // "warehouseName": null
+}
+
+export type UserList = UserItem[]
+
+export interface ResAclUserListParams {
+  records: UserList
+  total: number
+}
+
 export interface Roles {
   deleted?: boolean
   gmtCreate?: string
